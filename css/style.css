@@ -41,7 +41,7 @@ body {
 }
 
 .nav-links li {
-    margin: 0 15px; /* Memberikan jarak antar item navbar */
+    margin: 0 15px; 
 }
 
 .nav-links a {
@@ -129,7 +129,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 50px 20px;
     gap: 30px;
 }
@@ -138,59 +137,14 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Memastikan gambar dan teks tetap di satu baris */
     max-width: 1200px;
     width: 100%;
 }
 
-.text-section {
-    flex: 1 1 300px;
-    text-align: center;
-    padding: 20px;
-}
-
-.pembukaan {
-    font-size: 24px;
-    margin: 0;
-    color: #ffffff;
-}
-
-h1 {
-    font-size: 36px;
-    margin: 10px 0;
-    line-height: 1.2;
-    color: #ffffff;
-}
-
-.highlight {
-    color: #4a90e2;
-}
-
-.role-saya {
-    font-size: 18px;
-    color: #ffffff;
-}
-
-.button-hero .button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #32b791;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button-hero .button:hover {
-    background-color: #357ab7;
-}
-
 .image-section {
-    flex: 1 1 300px;
-    text-align: center;
+    flex: 1;
+    text-align: center; /* Memastikan gambar tetap rata tengah di area kiri */
 }
 
 .image-wrapper {
@@ -203,11 +157,71 @@ h1 {
 }
 
 .image-wrapper img {
-    width: 200px;
-    height: 200px;
+    width: 250px; /* Ukuran gambar diperbesar agar menonjol */
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     max-width: 100%;
+}
+
+.text-section {
+    flex: 1;
+    text-align: left; /* Teks rata kiri */
+    padding: 20px;
+    margin-left: 30px; /* Jarak antara teks dan gambar */
+}
+
+.pembukaan {
+    font-size: 20px;
+    margin: 0;
+    font-style: italic; 
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 48px; 
+    margin: 10px 0;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #4a90e2; 
+}
+
+.role-saya {
+    font-size: 22px; 
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.button-hero .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: transparent;
+    background-color: #32b791;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #ffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-hero .button:hover {
+    background-color: #357ab7;
+}
+
+@media (max-width: 768px) {
+    .ruang-beranda {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .text-section {
+        margin-left: 0;
+    }
 }
 
 #home {
@@ -441,6 +455,9 @@ p {
 
 .btn:hover {
     background-color: #0056b3;
+    transform: translateY(-10px);
+    transform: scale(1.2);
+    box-shadow: 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 #Contact {
